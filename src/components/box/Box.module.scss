@@ -1,0 +1,236 @@
+@use "../../styles/variables" as var;
+
+.m_zero {
+  @include var.m(zero);
+}
+.m_xxs {
+  @include var.m(xxs);
+}
+.m_xs {
+  @include var.m(xs);
+}
+.m_sm {
+  @include var.m(sm);
+}
+.m_md {
+  @include var.m(md);
+}
+.m_lg {
+  @include var.m(lg);
+}
+.m_xl {
+  @include var.m(xl);
+}
+.m_xxl {
+  @include var.m(xxl);
+}
+
+.m_x_zero {
+  @include var.mx(zero);
+}
+.m_x_xxs {
+  @include var.mx(xxs);
+}
+.m_x_xs {
+  @include var.mx(xs);
+}
+.m_x_sm {
+  @include var.mx(sm);
+}
+.m_x_md {
+  @include var.mx(md);
+}
+.m_x_lg {
+  @include var.mx(lg);
+}
+.m_x_xl {
+  @include var.mx(xl);
+}
+.m_x_xxl {
+  @include var.mx(xxl);
+}
+
+.m_y_zero {
+  @include var.my(zero);
+}
+.m_y_xxs {
+  @include var.my(xxs);
+}
+.m_y_xs {
+  @include var.my(xs);
+}
+.m_y_sm {
+  @include var.my(sm);
+}
+.m_y_md {
+  @include var.my(md);
+}
+.m_y_lg {
+  @include var.my(lg);
+}
+.m_y_xl {
+  @include var.my(xl);
+}
+.m_y_xxl {
+  @include var.my(xxl);
+}
+
+.m_t_zero {
+  @include var.mt(zero);
+}
+.m_t_xxs {
+  @include var.mt(xxs);
+}
+.m_t_xs {
+  @include var.mt(xs);
+}
+.m_t_sm {
+  @include var.mt(sm);
+}
+.m_t_md {
+  @include var.mt(md);
+}
+.m_t_lg {
+  @include var.mt(lg);
+}
+.m_t_xl {
+  @include var.mt(xl);
+}
+.m_t_xxl {
+  @include var.mt(xxl);
+}
+
+.p_normal {
+  padding: 16px;
+
+  @include var.mq(md) {
+    padding: 24px;
+  }
+}
+.p_zero {
+  @include var.p(zero);
+}
+.p_xxs {
+  @include var.p(xxs);
+}
+.p_xs {
+  @include var.p(xs);
+}
+.p_sm {
+  @include var.p(sm);
+}
+.p_md {
+  @include var.p(md);
+}
+.p_lg {
+  @include var.p(lg);
+}
+.p_xl {
+  @include var.p(xl);
+}
+.p_xxl {
+  @include var.p(xxl);
+}
+
+.p_x_zero {
+  @include var.px(zero);
+}
+.p_x_xxs {
+  @include var.px(xxs);
+}
+.p_x_xs {
+  @include var.px(xs);
+}
+.p_x_sm {
+  @include var.px(sm);
+}
+.p_x_md {
+  @include var.px(md);
+}
+.p_x_lg {
+  @include var.px(lg);
+}
+.p_x_xl {
+  @include var.px(xl);
+}
+.p_x_xxl {
+  @include var.px(xxl);
+}
+
+.p_y_zero {
+  @include var.py(zero);
+}
+.p_y_xxs {
+  @include var.py(xxs);
+}
+.p_y_xs {
+  @include var.py(xs);
+}
+.p_y_sm {
+  @include var.py(sm);
+}
+.p_y_md {
+  @include var.py(md);
+}
+.p_y_lg {
+  @include var.py(lg);
+}
+.p_y_xl {
+  @include var.py(xl);
+}
+.p_y_xxl {
+  @include var.py(xxl);
+}
+
+.p_t_zero {
+  @include var.pt(zero);
+}
+.p_t_xxs {
+  @include var.pt(xxs);
+}
+.p_t_xs {
+  @include var.pt(xs);
+}
+.p_t_sm {
+  @include var.pt(sm);
+}
+.p_t_md {
+  @include var.pt(md);
+}
+.p_t_lg {
+  @include var.pt(lg);
+}
+.p_t_xl {
+  @include var.pt(xl);
+}
+.p_t_xxl {
+  @include var.pt(xxl);
+}
+
+.flex {
+  display: flex;
+}
+.flex_column {
+  flex-direction: column;
+}
+.gap_xxs {
+  @include var.gap(xxs);
+}
+.gap_xs {
+  @include var.gap(xs);
+}
+.gap_sm {
+  @include var.gap(sm);
+}
+.gap_md {
+  @include var.gap(md);
+}
+.gap_lg {
+  @include var.gap(lg);
+}
+.gap_xl {
+  @include var.gap(xl);
+}
+.gap_xxl {
+  @include var.gap(xxl);
+}

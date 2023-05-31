@@ -1,0 +1,14 @@
+@use "../../../../styles/variables" as var;
+
+.footer {
+  padding: 16px;
+  height: 56px;
+
+  @include var.mq(md) {
+    padding: 24px;
+  }
+}
+
+.hr {
+  border-top: 1px solid var.$light_gray;
+}

@@ -1,0 +1,64 @@
+@use "sass:map";
+
+$light_gray: #d0d0d0;
+
+$breakpoints: (
+  // size reference
+  // https://tailwindcss.com/docs/screens
+  "sm": "(min-width: 640px)",
+  "md": "(min-width: 768px)",
+  "lg": "(min-width: 1024px)",
+  "xl": "(min-width: 1280px)",
+  "xxl": "(min-width: 1536px)"
+);
+
+@mixin mq($size) {
+  @media screen and #{map.get($breakpoints, $size)} {
+    @content;
+  }
+}
+
+$space: (
+  "zero": 0,
+  "xxs": 4px,
+  "xs": 8px,
+  "sm": 16px,
+  "md": 24px,
+  "lg": 40px,
+  "xl": 80px,
+  "xxl": 120px,
+);
+
+@function get_space_size($size) {
+  @return #{map.get($space, $size)};
+}
+
+@mixin m($size) {
+  margin: get_space_size($size);
+}
+@mixin mx($size) {
+  margin: 0 get_space_size($size);
+}
+@mixin my($size) {
+  margin: get_space_size($size) 0;
+}
+@mixin mt($size) {
+  margin-top: get_space_size($size);
+}
+
+@mixin p($size) {
+  padding: get_space_size($size);
+}
+@mixin px($size) {
+  padding: 0 get_space_size($size);
+}
+@mixin py($size) {
+  padding: get_space_size($size) 0;
+}
+@mixin pt($size) {
+  padding-top: get_space_size($size);
+}
+
+@mixin gap($size) {
+  gap: get_space_size($size);
+}

@@ -1,0 +1,12 @@
+.box {
+  a {
+    color: #1b8dff;
+    text-decoration: none;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
