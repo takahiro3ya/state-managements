@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 
-import styles from "./Header.module.scss"
 import { pageItem } from "@/App"
+
+import styles from "./Header.module.scss"
 
 export const getPageTitle = (path: string): string | null => {
   for (const key in pageItem) {

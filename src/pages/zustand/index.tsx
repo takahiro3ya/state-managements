@@ -1,5 +1,12 @@
-function index() {
-  return <div>zustand</div>
-}
+import { Another } from "./Another"
+import { Parent } from "./Parent"
+import styles from "./Zustand.module.scss"
 
-export default index
+const Zustand = () => (
+  <div className={styles.zustand}>
+    <Parent />
+    <Another />
+  </div>
+)
+
+export default Zustand
