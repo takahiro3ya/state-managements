@@ -16,7 +16,7 @@ export const getPageTitle = (path: string): string | null => {
 export const Header = () => {
   const [title, setTitle] = useState("")
   const location = useLocation()
-  console.log("location:", location)
+
   useEffect(() => {
     setTitle("test")
   }, [location])

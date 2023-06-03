@@ -28,7 +28,7 @@ export const Footer = () => {
       <Box
         className={styles.hr}
         p={{ size: "md", dir: "top" }}
-        flex={{ isColumn: true, gap: "xs" }}
+        flex={{ isColumn: true, gap: "xxs" }}
       >
         {linkList.map((link) => (
           <A key={link.title} href={link.href}>

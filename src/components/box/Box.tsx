@@ -27,8 +27,6 @@ const makeClass = (space: Space) => {
 }
 
 export const Box: FC<Props> = ({ m, p, flex, className, children }) => {
-  console.log("🐈‍⬛🐈 makeClass:", p ? makeClass(p) : "NO p") // ❗️❗️ rm later
-
   return (
     <div
       className={`${styles[`p${p ? makeClass(p) : "_normal"}`]} ${
