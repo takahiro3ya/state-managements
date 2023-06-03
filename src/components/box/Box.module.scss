@@ -75,32 +75,32 @@
   @include var.my(xxl);
 }
 
-.m_t_zero {
+.m_top_zero {
   @include var.mt(zero);
 }
-.m_t_xxs {
+.m_top_xxs {
   @include var.mt(xxs);
 }
-.m_t_xs {
+.m_top_xs {
   @include var.mt(xs);
 }
-.m_t_sm {
+.m_top_sm {
   @include var.mt(sm);
 }
-.m_t_md {
+.m_top_md {
   @include var.mt(md);
 }
-.m_t_lg {
+.m_top_lg {
   @include var.mt(lg);
 }
-.m_t_xl {
+.m_top_xl {
   @include var.mt(xl);
 }
-.m_t_xxl {
+.m_top_xxl {
   @include var.mt(xxl);
 }
 
-.p_normal {
+.p_basic {
   padding: 16px;
 
   @include var.mq(md) {
@@ -182,28 +182,28 @@
   @include var.py(xxl);
 }
 
-.p_t_zero {
+.p_top_zero {
   @include var.pt(zero);
 }
-.p_t_xxs {
+.p_top_xxs {
   @include var.pt(xxs);
 }
-.p_t_xs {
+.p_top_xs {
   @include var.pt(xs);
 }
-.p_t_sm {
+.p_top_sm {
   @include var.pt(sm);
 }
-.p_t_md {
+.p_top_md {
   @include var.pt(md);
 }
-.p_t_lg {
+.p_top_lg {
   @include var.pt(lg);
 }
-.p_t_xl {
+.p_top_xl {
   @include var.pt(xl);
 }
-.p_t_xxl {
+.p_top_xxl {
   @include var.pt(xxl);
 }
 
@@ -233,4 +233,11 @@
 }
 .gap_xxl {
   @include var.gap(xxl);
+}
+
+.full_width {
+  width: 100%;
+}
+.full_flex {
+  flex: 1;
 }

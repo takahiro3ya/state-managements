@@ -14,9 +14,9 @@ export const Sidebar: FC<Props> = ({ errorOutlet }) => {
   const pageList = Object.values(pageItem)
 
   return (
-    <div className={styles.container}>
+    <Box isFlex>
       <div className={styles.sidebar}>
-        <Box>
+        <Box p>
           <ul>
             {pageList.map((page) => (
               <li key={`${page.title}-${page.path}`}>
@@ -27,7 +27,7 @@ export const Sidebar: FC<Props> = ({ errorOutlet }) => {
         </Box>
       </div>
 
-      <Box>{errorOutlet ? errorOutlet : <Outlet />}</Box>
-    </div>
+      <Box p fullFlex>{errorOutlet ? errorOutlet : <Outlet />}</Box>
+    </Box>
   )
 }

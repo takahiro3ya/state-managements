@@ -6,35 +6,48 @@ import styles from "./Box.module.scss"
 
 type Props = {
   m?: Space
-  p?: Space
+  p?: Space | true
+  isFlex?: boolean
   flex?: { isColumn?: boolean; gap?: Size }
+  fullWidth?: boolean
+  fullFlex?: boolean
   className?: string
   children: React.ReactNode
 }
 
-const makeClass = (space: Space) => {
-  let str = ""
+const makeClass = (space: Space | true) => {
+  if (space === true) {
+    return "_basic"
+  }
 
-  if (space.dir === "x") {
-    str += "_x"
-  } else if (space.dir === "y") {
-    str += "_y"
-  } else if (space.dir === "top") {
-    str += "_t"
+  let str = ""
+  if (space.dir) {
+    str += `_${space.dir}`
   }
   str += `_${space.size}`
 
   return str
 }
 
-export const Box: FC<Props> = ({ m, p, flex, className, children }) => {
+export const Box: FC<Props> = ({
+  m,
+  p,
+  isFlex,
+  flex,
+  fullWidth,
+  fullFlex,
+  className,
+  children,
+}) => {
   return (
     <div
-      className={`${styles[`p${p ? makeClass(p) : "_normal"}`]} ${
+      className={`${p ? styles[`p${makeClass(p)}`] : ""} ${
         m ? styles[`m${makeClass(m)}`] : ""
-      } ${flex ? styles.flex : ""} ${
+      } ${isFlex || flex ? styles.flex : ""} ${
         flex?.isColumn ? styles.flex_column : ""
-      } ${flex?.gap ? styles[`gap_${flex.gap}`] : ""} ${className}
+      } ${flex?.gap ? styles[`gap_${flex.gap}`] : ""} ${
+        fullWidth ? styles.full_width : ""
+      } ${fullFlex ? styles.full_flex : ""} ${className ?? ""}
       `}
     >
       {children}

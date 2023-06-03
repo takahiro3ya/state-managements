@@ -25,7 +25,8 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>
-        State managements by <span>{title}</span>
+        State managements by{"\n"}
+        <span>{title}</span>
       </h1>
     </header>
   )
