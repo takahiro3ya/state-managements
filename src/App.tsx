@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
+import { Layout, RouterError } from "./components"
 import ReactHooks from "./pages/react-hooks"
 import ReactRedux from "./pages/react-redux"
 import ReactReduxDefaultSample from "./pages/react-redux/defaultSample"
-import ReduxToolkit from "./pages/redux-toolkit"
 import Recoil from "./pages/recoil"
-import Zustand from "./pages/zustand"
+import ReduxToolkit from "./pages/redux-toolkit"
 import Swr from "./pages/swr"
-import { Layout, RouterError } from "./components"
+import Zustand from "./pages/zustand"
 
 type PageItem = {
   path: string

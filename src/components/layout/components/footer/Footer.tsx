@@ -1,5 +1,6 @@
-import styles from "./Footer.module.scss"
 import { Box, A } from "@/components"
+
+import styles from "./Footer.module.scss"
 
 type Link = { href: string; title: string }
 

@@ -85,7 +85,7 @@ module.exports = {
           // },
           // css modules は一番最後にする
           {
-            pattern: "./**.module.css",
+            pattern: "{./**.module.css,./**.module.scss}",
             group: "index",
             position: "after",
           },

@@ -1,7 +1,8 @@
 import { FC } from "react"
 
-import styles from "./Box.module.scss"
 import { Size, Space } from "@/utils/types"
+
+import styles from "./Box.module.scss"
 
 type Props = {
   m?: Space
