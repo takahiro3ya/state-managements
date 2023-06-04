@@ -1,6 +1,4 @@
 .zustand {
-  width: 100%;
-
   h2 {
     margin: 0;
     font-size: 20px;
@@ -8,5 +6,16 @@
 }
 
 .parent {
-  background-color: red;
+  background-color: #ffe1e1;
+  border-radius: 8px;
+}
+
+.child {
+  background-color: #ffabab;
+  border-radius: 8px;
+}
+
+.another {
+  background-color: #dfc8fc;
+  border-radius: 8px;
 }

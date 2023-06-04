@@ -15,19 +15,20 @@ export const Sidebar: FC<Props> = ({ errorOutlet }) => {
 
   return (
     <Box isFlex>
-      <div className={styles.sidebar}>
-        <Box p>
-          <ul>
-            {pageList.map((page) => (
-              <li key={`${page.title}-${page.path}`}>
-                <Link to={page.path}>{page.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </Box>
-      </div>
+      <Box p className={styles.sidebar}>
+        <ul>
+          {pageList.map((page) => (
+            <li key={`${page.title}-${page.path}`}>
+              <Link to={page.path}>{page.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </Box>
+      <div className={styles.vertical_line}></div>
 
-      <Box p fullFlex>{errorOutlet ? errorOutlet : <Outlet />}</Box>
+      <Box p fullFlex>
+        {errorOutlet ? errorOutlet : <Outlet />}
+      </Box>
     </Box>
   )
 }

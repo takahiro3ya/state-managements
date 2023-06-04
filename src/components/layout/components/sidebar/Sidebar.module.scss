@@ -1,5 +1,16 @@
+@use "../../../../styles/variables" as var;
+
+.vertical_line {
+  margin: 16px 0;
+  border-right: 1px solid var.$light_gray;
+
+  @include var.mq(md) {
+    margin: 24px 0;
+  }
+}
+
 .sidebar {
-  width: 180px;
+  width: 120px;
 
   ul {
     margin: 0;
