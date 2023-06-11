@@ -1,26 +1,20 @@
 import { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 
-import { pageItem } from "@/App"
+import { getTitleFromPath } from "@/constants"
 
 import styles from "./Header.module.scss"
-
-export const getPageTitle = (path: string): string | null => {
-  for (const key in pageItem) {
-    if (pageItem[key].path === path) {
-      return pageItem[key].title
-    }
-  }
-  return null
-}
 
 export const Header = () => {
   const [title, setTitle] = useState("")
   const location = useLocation()
 
   useEffect(() => {
-    setTitle("test")
-  }, [location])
+    const title = getTitleFromPath(location.pathname)
+    if (title) {
+      setTitle(title)
+    }
+  }, [location.pathname])
 
   return (
     <header className={styles.header}>

@@ -1,10 +1,11 @@
+@use "../../../../styles/variables" as var;
+
 .header {
   display: flex;
   align-items: center;
   padding: 0 24px;
   height: 64px;
-  background-color: #fffdf0;
-  border-bottom: 1px solid khaki;
+  border-bottom: 1px solid var.$light_gray;
 }
 
 .title {

@@ -12,7 +12,7 @@ export const Child = memo(() => {
     selectUser(Number(e.target.value) as UserNum)
   }
 
-  console.log("Child")
+  console.log("Child rendered")
 
   return (
     <>
@@ -20,7 +20,7 @@ export const Child = memo(() => {
       <button onClick={increase}>click</button>
       <button onClick={reset}>click</button>
 
-      <select name="users" required onChange={onChangUser}>
+      <select defaultValue="" required onChange={onChangUser}>
         <option value="" disabled>
           ユーザーを選択
         </option>

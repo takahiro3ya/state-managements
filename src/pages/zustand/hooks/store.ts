@@ -1,4 +1,5 @@
 import { create } from "zustand"
+import { useQuery } from 'react-query';
 
 // export const userNumList = [...Array(10)].map((_, i) => i + 1)
 export const userNumList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const // as const 付与のため上記を書き換え
@@ -46,6 +47,7 @@ export const useStore = create<State & Actions>()((set) => ({
   reset: () => set({ count: 0 }),
 
   userName: initialState.userName,
+  loading: false,
   selectUser: async (userNum: UserNum) => {
     const user: User = await fetchUser(userNum)
     set({ userName: user.name })

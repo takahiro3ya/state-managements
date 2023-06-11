@@ -7,7 +7,7 @@ import styles from "./Zustand.module.scss"
 export const Another = () => {
   const userName = useStore((state) => state.userName)
 
-  console.log("Another")
+  console.log("Another rendered")
 
   return (
     <Box

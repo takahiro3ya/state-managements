@@ -8,7 +8,7 @@ import styles from "./Zustand.module.scss"
 export const Parent = () => {
   const count = useStore((state) => state.count)
 
-  console.log("Parent")
+  console.log("Parent rendered")
 
   return (
     <Box p={{ size: "xs" }} className={styles.parent}>
