@@ -12,7 +12,7 @@ type Props = {
   fullWidth?: boolean
   fullFlex?: boolean
   className?: string
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const makeClass = (space: Space | true) => {

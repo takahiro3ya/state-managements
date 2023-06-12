@@ -8,6 +8,7 @@ import ReactReduxDefaultSample from "./pages/react-redux/defaultSample"
 import Recoil from "./pages/recoil"
 import ReduxToolkit from "./pages/redux-toolkit"
 import Swr from "./pages/swr"
+import TanStackQuery from "./pages/tan-stack-query"
 import Zustand from "./pages/zustand"
 
 type ElementItem = {
@@ -18,6 +19,7 @@ const elementItem: ElementItem = {
   reactHooks: <ReactHooks />,
   zustand: <Zustand />,
   recoil: <Recoil />,
+  tanStackQuery: <TanStackQuery />,
   swr: <Swr />,
   reactRedux: <ReactRedux />,
   reactReduxDefaultSample: <ReactReduxDefaultSample />,

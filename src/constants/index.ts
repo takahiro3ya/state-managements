@@ -2,6 +2,7 @@ export const pageKeyList = [
   "reactHooks",
   "zustand",
   "recoil",
+  "tanStackQuery",
   "swr",
   "reactRedux",
   "reactReduxDefaultSample",
@@ -16,6 +17,7 @@ export const pageItem: PageItem = {
   reactHooks: { path: "/", title: "React Hooks" },
   zustand: { path: "/zustand", title: "Zustand" },
   recoil: { path: "/recoil", title: "Recoil" },
+  tanStackQuery: { path: "/tan-stack-query", title: "TanStack Query" },
   swr: { path: "/swr", title: "SWR" },
   reactRedux: { path: "/react-redux", title: "React Redux" },
   reactReduxDefaultSample: {
