@@ -1,7 +1,8 @@
 // import { Box } from "@/components"
 import { memo, ChangeEvent } from "react"
 
-import { useStore, userNumList, UserNum } from "./hooks/store"
+import { UserNum, userNumList } from "./hooks/sliceUser"
+import { useStore } from "./hooks/store"
 
 export const Child = memo(() => {
   const increase = useStore((state) => state.increase)
@@ -17,8 +18,8 @@ export const Child = memo(() => {
   return (
     <>
       <h2>Child</h2>
-      <button onClick={increase}>click</button>
-      <button onClick={reset}>click</button>
+      <button onClick={increase}>Count Up</button>
+      <button onClick={reset}>Count Reset</button>
 
       <select defaultValue="" required onChange={onChangUser}>
         <option value="" disabled>
