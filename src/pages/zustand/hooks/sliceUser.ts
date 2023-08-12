@@ -13,6 +13,8 @@ type UserState = {
 }
 
 type UserActions = {
+  loading: boolean
+  error: Error | null
   selectUser: (userNum: UserNum) => void
 }
 
@@ -43,8 +45,17 @@ export const createUserSlice: StateCreator<UserSlice, [], [], UserSlice> = (
   set,
 ) => ({
   userName: userInitialState.userName,
+  // loading の設定方法
+  // https://www.grepper.com/answers/464077/zustand+stores+manage+loading+state
+  loading: false,
+  error: null,
   selectUser: async (userNum: UserNum) => {
-    const user: User = await fetchUser(userNum)
-    set({ userName: user.name })
+    try {
+      set({ loading: true })
+      const user: User = await fetchUser(userNum)
+      set({ loading: false, userName: user.name })
+    } catch (e) {
+      set({ loading: false, error: e as Error })
+    }
   },
 })
